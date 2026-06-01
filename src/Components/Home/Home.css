@@ -1,0 +1,112 @@
+.home {
+    width: 100%;
+    background-image: url("/icons/Vector3.png"), url("/icons/Vector1.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+
+    .home-text {
+        .welcome{
+            color: #0C96E2;
+            font-family: Poppins;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 20px;
+            line-height: 145%;
+            vertical-align: middle;
+            padding: 201px 0 7px 75px;
+        }
+        .home-title {
+            font-family: Poppins;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 55px;
+            line-height: 110%;
+            padding-left: 75px ;
+            color: #1D2130;
+            transition: all 0.4s ease;
+        }
+        .home-description{
+            font-family: Poppins;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 18px;
+            line-height: 150%;
+            margin: 40px 0 0 75px;
+            color: #1D2130;
+            transition: all 0.4s ease;
+        }
+        .cv{
+            display: block;
+            width: 155px;
+            height: 50px;
+            padding: 13px 26px;
+            margin: 30px 0 0 75px;
+            text-decoration: none;
+            background-color: #0C96E2;
+            color: white;
+            border-radius: 8px;
+            font-family: Poppins;
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 15px;
+            line-height: 24px;
+            transition: all 0.4s ease;
+        }
+    }
+    .personal-image{
+        width: 43.33vw;
+        margin: 124px 70px 61px 0;
+    }
+}
+
+.home-dark-mode {
+    background-color: rgb(27, 36, 49);
+    .home-text{
+        .home-title , .home-description{
+            color: white;
+        }
+        .cv{background-color: #0C96E299;}
+    }
+}
+
+@media screen and (max-width : 992px) {
+    .home {
+        background-size: cover;
+        display: block;
+        .home-text {
+            .welcome{
+                padding: 150px 0 7px 0;
+                text-align: center;
+            }
+            .home-title {
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 110%;
+                padding: 0 20px 0 20px;
+                text-align: center;
+            }
+            .home-description{
+                margin: 40px 20px 0 20px;
+                width: auto;
+                text-align: center;
+            }
+            .cv{
+                margin: 40px auto;
+                font-weight: 400;
+            }
+        }
+        .personal-image{
+            display: block;
+            width: 65vw;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+

@@ -1,0 +1,215 @@
+.contact {
+    padding: 94px 0;
+    transition: all 0.4s ease;
+
+    .contact-title {
+        width: 89.75%;
+        margin: 0 auto;
+        margin-top: 40px;
+        font-family: Poppins;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 40px;
+        line-height: 54px;
+        color: #1D2130;
+
+        span {
+            color: #0C96E2;
+        }
+
+        transition: all 0.4s ease;
+    }
+
+    .SendEmail {
+        width: 89.75%;
+        margin: 0 auto;
+        margin-top: 75px;
+        display: flex;
+        justify-content: space-between;
+        transition: all 0.4s ease;
+
+        .contactInfo {
+            width: 31.53%;
+
+            .call,
+            .email,
+            .address {
+                width: 100%;
+                height: 104px;
+                padding-left: 16px;
+                border-radius: 8px;
+                border: 1px solid #BEC0BF;
+                display: flex;
+                align-items: center;
+                gap: 19.88px;
+                margin-bottom: 24px;
+
+                .img {
+                    width: 61.85px;
+                    height: 56px;
+                    background-color: #0C96E2;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 0.4s ease;
+
+                    img {
+                        width: 30.92px;
+                        height: 28px;
+                    }
+                }
+
+                .info {
+                    .title {
+                        font-family: Poppins;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 14px;
+                        letter-spacing: 0.8%;
+                        color: #92929D;
+                        margin: 5px 0 14px 0;
+                    }
+
+                    .value {
+                        font-family: Poppins;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 18px;
+                        letter-spacing: 0.5%;
+                        color: #1D2130;
+                        transition: all 0.4s ease;
+                    }
+                }
+            }
+        }
+
+        .form {
+            width: 63.6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: normal;
+            flex-wrap: wrap;
+            gap: 25px;
+
+            .inputName,
+            .inputEmail,
+            .inputNumber,
+            .inputMsg {
+                padding: 16px 26.5px;
+                font-family: Poppins;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                letter-spacing: 0.8%;
+                color: #92929D;
+                border: 1px solid #BEC0BF;
+                border-radius: 8px;
+                background-color: transparent;
+
+                &:focus {
+                    outline: 2px solid #0C96E2;
+                    border: none;
+                }
+
+                &:hover {
+                    box-shadow: 3px 3px 15px -5px #0C96E2;
+                }
+            }
+
+            .inputName,
+            .inputEmail {
+                width: 48%;
+                height: 56px;
+            }
+
+            .inputNumber {
+                width: 100%;
+                height: 56px;
+                font-family: Poppins;
+            }
+
+            .inputMsg {
+                width: 100%;
+                height: 170px;
+                resize: none;
+            }
+
+            .send {
+                width: 200px;
+                height: 50px;
+                background-color: #0C96E2;
+                color: white;
+                font-family: Poppins;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                letter-spacing: 0.8%;
+                border: none;
+                border-radius: 8px;
+                transition: all 0.4s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgb(24, 24, 220);
+                }
+            }
+        }
+    }
+
+}
+
+.contact-dark-mode {
+    background-color: rgb(27, 36, 49);
+    .contact-title{
+        color: white;
+    }
+    .SendEmail{
+        .contactInfo{
+            .call,
+            .email,
+            .address{
+                .img{
+                    background-color: #0C96E299;
+                }
+                .info{
+                    .value{
+                        color: white;
+                    }
+                }
+            }
+        }
+        .form{
+            .send{
+                background-color: #0C96E299;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 992px){
+    .contact {
+        .contact-title {
+            font-size: 30px;
+            text-align: center;
+        }
+        .SendEmail {
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            .contactInfo {
+                width: 100%;
+            }
+            .form {
+                width:100%;
+                .inputName,
+                .inputEmail {
+                    width: 100%;
+                }
+                .send {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

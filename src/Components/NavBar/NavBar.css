@@ -1,0 +1,192 @@
+nav {
+    background-color: white;
+    /* width: 89.75vw; */
+    width: 100%;
+    height: 64px;
+    padding: 0 70px;
+    box-shadow: 0 1px 15px -5px #0C96E2;
+    /* border-radius: 37px; */
+    position: fixed;
+    z-index: 8;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease;
+
+    .myname {
+        font-family: Poppins;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 24px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        color: #1D2130;
+        transition: color 0.4s ease;
+    }
+    .links {
+        display: flex;
+        gap: 24px;
+        p {
+            font-family: Poppins;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 16px;
+            line-height: 150%;
+            cursor: pointer;
+            transition: color 0.4s ease;
+            &:hover {
+                color: #0C96E2;
+            }
+        }
+    }
+    .active {
+        p {
+            color: #0C96E2;
+        }
+    }
+    .changeMode {
+        width: 29.12px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .bars {
+        display: none;
+        width: 30px;
+        height: 30px;
+        &:hover {
+            cursor: pointer;
+            color: #0C96E2;
+        }
+    }
+}
+
+.show-menu ,.close-menu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all 0.4s ease;
+    z-index: 9;
+    .menu {
+        width: 50vw;
+        height: 95vh;
+        border: 1px solid #0C96E2;
+        border-radius: 10px;
+        background-color: white;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: all 0.4s ease;
+        a {
+            p {
+                font-family: Poppins;
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 16px;
+                line-height: 150%;
+                cursor: pointer;
+                transition: color 0.4s ease;
+                &:hover {
+                    color: #0C96E2;
+                }
+            }
+        }
+        .active{
+            p{
+                color: #0C96E2;
+            }
+        }
+        .theme {
+            padding: 5px;
+            border: 1px solid rgb(27, 36, 49);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .curent-mode-name {
+                font-family: Poppins;
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 16px;
+                line-height: 150%;
+                cursor: pointer;
+                transition: color 0.4s ease;
+            }
+            .curent-mode-img {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.close-menu {
+    right: -100vw;
+}
+
+.nav-dark-mode {
+    background-color: rgb(27, 36, 49);
+    .myname {
+        color: white;
+    }
+    .links {
+        p {
+            color: white;
+        }
+    }
+    .active {
+        p {
+            color: #0C96E2;
+        }
+    }
+    .bars{
+        color: white;
+    }
+}
+
+.menu-dark-mode{
+    .menu{
+        background-color:  rgb(27, 36, 49);
+        a{
+            p{
+                color: white;
+            }
+        }
+        .theme {
+            background-color: #0C96E299;
+            .curent-mode-name {
+                color: white;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 992px) {
+    nav {
+        padding: 0 20px;
+        .myname {
+            font-weight: 500;
+            font-size: 20px;
+        }
+        .links {
+            display: none;
+        }
+        .changeMode {
+            display: none;
+        }
+        .bars {
+            display: block;
+        }
+    }
+    
+}
+
+
